@@ -291,6 +291,22 @@ function finishStep(wizard, state)
 }
 
 /**
+ * Routes to some step.
+ *
+ * @static
+ * @private
+ * @method goToStep
+ * @param wizard {Object} The jQuery wizard object
+ * @param options {Object} Settings of the current wizard
+ * @param state {Object} The state container of the current wizard
+ * @return {Boolean} Indicates whether the action executed
+ **/
+// function goToStep(wizard, options, state, index)
+// {
+//     return paginationClick(wizard, options, state, index);
+// }
+
+/**
  * Gets or creates if not exist an unique event namespace for the given wizard instance.
  *
  * @static
@@ -1467,9 +1483,12 @@ $.fn.steps.remove = function (index)
  * @param index {Integer} An integer that belongs to the position of a step
  * @param step {Object} The step object to change
  **/
-$.fn.steps.setStep = function (index, step)
+$.fn.steps.setStep = function (step)
 {
-    throw new Error("Not yet implemented!");
+    var options = getOptions(this),
+        state = getState(this);
+
+    return goToStep(this, options, state, step);
 };
 
 /**

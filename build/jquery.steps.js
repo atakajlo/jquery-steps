@@ -291,22 +291,6 @@ function finishStep(wizard, state)
 }
 
 /**
- * Routes to some step.
- *
- * @static
- * @private
- * @method goToStep
- * @param wizard {Object} The jQuery wizard object
- * @param options {Object} Settings of the current wizard
- * @param state {Object} The state container of the current wizard
- * @return {Boolean} Indicates whether the action executed
- **/
-// function goToStep(wizard, options, state, index)
-// {
-//     return paginationClick(wizard, options, state, index);
-// }
-
-/**
  * Gets or creates if not exist an unique event namespace for the given wizard instance.
  *
  * @static

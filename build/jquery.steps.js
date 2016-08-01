@@ -1,6 +1,6 @@
 /*! 
- * jQuery Steps v1.1.0 - 09/04/2014
- * Copyright (c) 2014 Rafael Staib (http://www.jquery-steps.com)
+ * jQuery Steps v1.1.0 - 08/01/2016
+ * Copyright (c) 2016 Rafael Staib (http://www.jquery-steps.com)
  * Licensed under MIT http://www.opensource.org/licenses/MIT
  */
 ;(function ($, undefined)
@@ -1359,6 +1359,16 @@ $.fn.steps.destroy = function ()
 $.fn.steps.finish = function ()
 {
     finishStep(this, getState(this));
+};
+
+/**
+ * Triggers the onCanceled event.
+ *
+ * @method cancel
+ **/
+$.fn.steps.cancel = function ()
+{
+    cancel(this);
 };
 
 /**

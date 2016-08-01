@@ -58,6 +58,16 @@ $.fn.steps.finish = function ()
 };
 
 /**
+ * Triggers the onCanceled event.
+ *
+ * @method cancel
+ **/
+$.fn.steps.cancel = function ()
+{
+    cancel(this);
+};
+
+/**
  * Gets the current step index.
  *
  * @method getCurrentIndex
